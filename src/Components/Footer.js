@@ -1,1 +1,3 @@
-export const Footer = () => <footer>Footer</footer>
+export const Footer = () => (
+	<footer className='text-center'>Little Lemon &copy; 2022</footer>
+)

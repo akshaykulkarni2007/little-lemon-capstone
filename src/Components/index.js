@@ -1,4 +1,7 @@
 export { Header } from './Header'
 export { Nav } from './Nav'
-export { Main } from './Main'
 export { Footer } from './Footer'
+
+export { HeroContent } from './HeroContent'
+export { SpecialsItem } from './SpecialsItem'
+export { TestimonialItem } from './TestimonialItem'
