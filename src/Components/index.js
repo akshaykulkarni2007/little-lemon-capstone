@@ -2,5 +2,5 @@ export { Header, Nav, Footer } from './Layout'
 export { Button } from './Common'
 
 export { HeroContent } from './HeroContent'
-export { SpecialsItem } from './SpecialsItem'
+export { Specials, SpecialsItem } from './Specials'
 export { TestimonialItem } from './TestimonialItem'
