@@ -25,3 +25,9 @@ export const specials = [
 		price: 15.99,
 	},
 ]
+
+export const occasions = [
+	{ value: 'birthday', label: 'Birthday' },
+	{ value: 'anniversary', label: 'Anniversary' },
+	{ value: 'engagement', label: 'Engagement' },
+]

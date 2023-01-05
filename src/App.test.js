@@ -1,8 +1,22 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { render, screen } from '@testing-library/react'
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+import App, { initializeTimes, updateTimes } from './App'
+
+describe('App', () => {
+	render(<App />)
+
+	test('renders App', () => {
+		const title = screen.getAllByText(/Little Lemon/i)
+		expect(title).toHaveLength(2)
+	})
+
+	test('initializeTimes returns values', () => {
+		const times = initializeTimes()
+		expect(times).toBeTruthy()
+	})
+
+	test('updateTimes returns values', () => {
+		const newTimes = updateTimes('test value', 'action')
+		expect(newTimes).toEqual('test value')
+	})
+})
