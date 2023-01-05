@@ -1,8 +1,9 @@
 import './styles.css'
 
-export const Button = ({ type, classes, handleClick, children }) => (
+export const Button = ({ variant, type, classes, handleClick, children }) => (
 	<button
-		className={`btn ${type} ${classes ? classes : ''}`}
+		type={type ? type : 'button'}
+		className={`btn ${variant} ${classes ? classes : ''}`}
 		onClick={handleClick}>
 		{children}
 	</button>

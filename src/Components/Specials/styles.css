@@ -51,6 +51,7 @@
 
 .specials-card .specials-description {
 	font-weight: 400;
+	min-height: 80px;
 	margin-bottom: 3rem;
 }
 

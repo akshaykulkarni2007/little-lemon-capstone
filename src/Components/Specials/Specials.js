@@ -9,7 +9,7 @@ export const Specials = () => (
 	<section id="specials-section" className="container specials">
 		<h2 className="specials-heading flex">
 			<span>This week's specials!</span>
-			<Button type="primary" handleClick={() => {}}>
+			<Button variant="primary" handleClick={() => {}}>
 				Online Menu
 			</Button>
 		</h2>
