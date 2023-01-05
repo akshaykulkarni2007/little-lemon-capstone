@@ -13,7 +13,8 @@ export const Nav = () => {
 			<Button
 				variant="primary"
 				classes="toggle-menu"
-				handleClick={() => setShowNav((prev) => !prev)}>
+				handleClick={() => setShowNav((prev) => !prev)}
+				aria-label="toggles navigation on click">
 				<img src="/assets/images/hamburger.svg" alt="hamburger menu" />
 			</Button>
 

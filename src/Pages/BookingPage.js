@@ -1,12 +1,17 @@
-import { BookingForm } from '../Components/BookingForm'
+import { BookingForm } from '../Components'
 
-export const BookingPage = ({ availableTimes, setAvailableTimes }) => {
+export const BookingPage = ({
+	availableTimes,
+	setAvailableTimes,
+	submitForm,
+}) => {
 	return (
 		<section id="booking" className="booking-section">
 			<div className="container">
 				<BookingForm
 					availableTimes={availableTimes}
 					setAvailableTimes={setAvailableTimes}
+					submitForm={submitForm}
 				/>
 			</div>
 		</section>

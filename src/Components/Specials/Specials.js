@@ -1,7 +1,7 @@
 import { Button } from '../Common'
 import { SpecialsItem } from './SpecialsItem'
 
-import { specials as specialsData } from '../../data'
+import { SPECIALS as specialsData } from '../../constants'
 
 import './styles.css'
 

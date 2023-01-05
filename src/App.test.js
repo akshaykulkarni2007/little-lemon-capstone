@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 
-import App, { initializeTimes, updateTimes } from './App'
+import App from './App'
+import { initializeTimes, updateTimes } from './Main'
 
 describe('App', () => {
 	render(<App />)
