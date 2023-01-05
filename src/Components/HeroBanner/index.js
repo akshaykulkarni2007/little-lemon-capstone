@@ -1,8 +1,8 @@
-import { Button } from './Common'
+import { Button } from '../Common'
 
 import './styles.css'
 
-export const HeroContent = () => (
+export const HeroBanner = () => (
 	<section id="hero-banner" className="hero-banner">
 		<div className="container flex hero-container">
 			<div className="hero-content">

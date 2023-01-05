@@ -1,8 +1,8 @@
-import { HeroContent, Specials, TestimonialItem } from '../Components'
+import { HeroBanner, Specials, TestimonialItem } from '../Components'
 
 export const HomePage = () => (
 	<>
-		<HeroContent />
+		<HeroBanner />
 		<Specials />
 		<TestimonialItem />
 	</>
