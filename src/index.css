@@ -83,3 +83,25 @@ img {
 .text-center {
 	text-align: center;
 }
+
+/* Forms */
+input,
+select {
+	width: 100%;
+	padding: 0.8rem 1rem;
+}
+
+label,
+select,
+input[type='date'] {
+	cursor: pointer;
+}
+
+label {
+	display: inline-block;
+	margin-bottom: 0.5rem;
+}
+
+.input-group {
+	margin-bottom: 1rem;
+}
