@@ -3,6 +3,8 @@ export const SelectInput = ({
 	label,
 	name,
 	value,
+	touched,
+	errors,
 	handleChange,
 	...rest
 }) => {
@@ -11,18 +13,22 @@ export const SelectInput = ({
 			<label htmlFor={name} className="input-label">
 				{label}
 			</label>
+
 			<select
 				className="input-control"
 				id={name}
 				value={value}
 				onChange={handleChange}
 				{...rest}>
+				<option value="">Select {label}</option>
 				{options.map((option) => (
 					<option value={option.value} key={option.value}>
 						{option.label}
 					</option>
 				))}
 			</select>
+
+			{touched && errors ? <div className="input-error">{errors}</div> : null}
 		</div>
 	)
 }
