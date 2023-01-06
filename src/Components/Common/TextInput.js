@@ -9,7 +9,7 @@ export const TextInput = ({
 	...rest
 }) => {
 	return (
-		<div className="input-group">
+		<div className={`input-group ${touched && errors ? 'error' : ''}`}>
 			<label htmlFor={name} className="input-label">
 				{label}
 			</label>
@@ -18,6 +18,9 @@ export const TextInput = ({
 				className="input-control"
 				type={type}
 				id={name}
+				name={name}
+				aria-label={name}
+				data-testid={name}
 				value={value}
 				onChange={handleChange}
 				{...rest}

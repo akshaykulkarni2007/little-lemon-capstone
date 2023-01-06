@@ -9,7 +9,7 @@ export const SelectInput = ({
 	...rest
 }) => {
 	return (
-		<div className="input-group">
+		<div className={`input-group ${touched && errors ? 'error' : ''}`}>
 			<label htmlFor={name} className="input-label">
 				{label}
 			</label>
@@ -17,6 +17,9 @@ export const SelectInput = ({
 			<select
 				className="input-control"
 				id={name}
+				name={name}
+				aria-label={name}
+				data-testid={name}
 				value={value}
 				onChange={handleChange}
 				{...rest}>

@@ -107,6 +107,14 @@ label {
 	margin-bottom: 1rem;
 }
 
+.input-group.error label {
+	color: var(--danger);
+}
+
+.input-group.error input {
+	border: 1px solid var(--danger);
+}
+
 .input-error {
 	margin: 0.5rem 0 1rem;
 	color: var(--danger);

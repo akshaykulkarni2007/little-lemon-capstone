@@ -71,6 +71,7 @@ export const BookingForm = ({
 					label="Select date"
 					name="date"
 					value={values.date}
+					required
 					touched={touched.date}
 					errors={errors.date}
 					handleChange={changeTimeSlots}
@@ -82,6 +83,7 @@ export const BookingForm = ({
 					label="Time"
 					name="time"
 					value={values.time}
+					required
 					touched={touched.time}
 					errors={errors.time}
 					handleChange={handleChange}
@@ -92,6 +94,9 @@ export const BookingForm = ({
 					type="number"
 					label="Number of guests"
 					name="guests"
+					min="1"
+					max="10"
+					required
 					touched={touched.guests}
 					errors={errors.guests}
 					value={values.guests}
@@ -104,6 +109,7 @@ export const BookingForm = ({
 					label="Occasion"
 					name="occasion"
 					value={values.occasion}
+					required
 					touched={touched.occasion}
 					errors={errors.occasion}
 					handleChange={handleChange}
