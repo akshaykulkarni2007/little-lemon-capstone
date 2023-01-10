@@ -2,7 +2,6 @@
 /* eslint-disable testing-library/prefer-screen-queries */
 
 import { fireEvent, render, screen } from '@testing-library/react'
-// import { useFormik } from 'formik'
 
 import { BookingForm } from './'
 import { BookingPage } from '../../Pages/BookingPage'
@@ -88,7 +87,7 @@ describe('Booking Form Validations', () => {
 		fireEvent.change(timeInput, { target: { value: '20:00' } })
 		fireEvent.focusOut(timeInput)
 
-		fireEvent.change(occasionInput, { target: { value: '' } })
+		fireEvent.change(occasionInput, { target: { value: 'birthday' } })
 		fireEvent.focusOut(occasionInput)
 
 		fireEvent.submit(form, {})
