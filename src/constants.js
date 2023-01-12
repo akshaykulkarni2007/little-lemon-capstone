@@ -1,3 +1,12 @@
+export const NAV_ITEMS = [
+	{ name: 'Home', link: '/' },
+	{ name: 'About', link: '/about' },
+	{ name: 'Menu', link: '/menu' },
+	{ name: 'Reservations', link: '/booking' },
+	{ name: 'Order Online', link: '/order' },
+	{ name: 'Login', link: '/login' },
+]
+
 export const ACTION_TYPES = {
 	DATE_CHANGE: 'DATE_CHANGE',
 	ADD_BOOKING: 'ADD_BOOKING',

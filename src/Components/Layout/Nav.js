@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { Button } from '../Common'
+import { NAV_ITEMS } from '../../constants'
 
 import './styles.css'
 
@@ -34,36 +35,13 @@ export const Nav = () => {
 			</Button>
 
 			<ul className={`nav-list flex ${showNav && 'active'}`}>
-				<li>
-					<NavLink to="/" onClick={() => setShowNav(false)}>
-						Home
-					</NavLink>
-				</li>
-				<li>
-					<NavLink to="/about" onClick={() => setShowNav(false)}>
-						About
-					</NavLink>
-				</li>
-				<li>
-					<NavLink to="/menu" onClick={() => setShowNav(false)}>
-						Menu
-					</NavLink>
-				</li>
-				<li>
-					<NavLink to="/booking" onClick={() => setShowNav(false)}>
-						Reservations
-					</NavLink>
-				</li>
-				<li>
-					<NavLink to="/order" onClick={() => setShowNav(false)}>
-						Order Online
-					</NavLink>
-				</li>
-				<li>
-					<NavLink to="/login" onClick={() => setShowNav(false)}>
-						Login
-					</NavLink>
-				</li>
+				{NAV_ITEMS.map((item) => (
+					<li>
+						<NavLink to={item.link} onClick={() => setShowNav(false)}>
+							{item.name}
+						</NavLink>
+					</li>
+				))}
 			</ul>
 		</nav>
 	)
