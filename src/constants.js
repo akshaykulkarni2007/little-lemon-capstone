@@ -35,8 +35,35 @@ export const SPECIALS = [
 		name: 'Lemon Dessert',
 		image: 'assets/images/lemon dessert.jpg',
 		description:
-			'This comes straight from grandma’s recipe book, every last ingredient has been sourced and is as authentic as can be imagined.',
+			"This comes straight from grandma's recipe book, every last ingredient has been sourced and is as authentic as can be imagined.",
 		price: 15.99,
+	},
+]
+
+export const TESTIMONIALS = [
+	{
+		name: 'John Doe',
+		image: 'assets/images/avatar.jpg',
+		rating: 4,
+		text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+	},
+	{
+		name: 'Sam Doe',
+		image: 'assets/images/avatar.jpg',
+		rating: 5,
+		text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+	},
+	{
+		name: 'Mark Doe',
+		image: 'assets/images/avatar.jpg',
+		rating: 5,
+		text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
+	},
+	{
+		name: 'Ben Doe',
+		image: 'assets/images/avatar.jpg',
+		rating: 3,
+		text: 'Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.',
 	},
 ]
 

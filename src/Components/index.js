@@ -3,7 +3,7 @@ export { Button } from './Common'
 
 export { HeroBanner } from './HeroBanner'
 export { Specials, SpecialsItem } from './Specials'
-export { TestimonialItem } from './TestimonialItem'
+export { Testimonials, TestimonialItem } from './Testimonials'
 export { About } from './About'
 
 export { BookingForm } from './BookingForm'
