@@ -8,7 +8,7 @@ describe('App', () => {
 
 	test('renders App', () => {
 		const title = screen.getAllByText(/Little Lemon/i)
-		expect(title).toHaveLength(2)
+		expect(title).toHaveLength(3)
 	})
 
 	test('initializeTimes returns values', () => {

@@ -5,7 +5,7 @@ import { HomePage, BookingPage, ConfirmationPage } from './Pages'
 
 import { ACTION_TYPES } from './constants'
 // temp
-import { fetchAPI, submitAPI } from './data'
+import { fetchAPI, submitAPI } from './temp'
 
 export const initializeTimes = () => {
 	const data = fetchAPI(new Date())

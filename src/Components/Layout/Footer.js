@@ -13,7 +13,7 @@ export const Footer = () => (
 						<h5>Links</h5>
 						<ul className="footer-nav-list">
 							{NAV_ITEMS.map((item) => (
-								<li className="footer-nav-item">
+								<li className="footer-nav-item" key={item.name}>
 									<NavLink to={item.link}>{item.name}</NavLink>
 								</li>
 							))}

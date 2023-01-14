@@ -36,7 +36,7 @@ export const Nav = () => {
 
 			<ul className={`nav-list flex ${showNav && 'active'}`}>
 				{NAV_ITEMS.map((item) => (
-					<li>
+					<li key={item.name}>
 						<NavLink to={item.link} onClick={() => setShowNav(false)}>
 							{item.name}
 						</NavLink>

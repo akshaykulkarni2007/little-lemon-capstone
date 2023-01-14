@@ -1,4 +1,3 @@
-// temp
 export const seededRandom = function (seed) {
 	var m = 2 ** 35 - 31
 	var a = 185852

@@ -28,6 +28,7 @@ describe('Booking Form Validations', () => {
 		expect(dateInput).toHaveAttribute('required')
 		expect(timeInput).toHaveAttribute('required')
 		expect(guestsInput).toHaveAttribute('required')
+		expect(guestsInput).toHaveAttribute('max', '10')
 		expect(occasionInput).toHaveAttribute('required')
 	})
 
