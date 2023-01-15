@@ -65,7 +65,7 @@ export const BookingForm = ({
 		<>
 			<h1 className="booking-header">Book A Table</h1>
 
-			<form onSubmit={handleSubmit} data-testid="booking-form">
+			<form onSubmit={handleSubmit}>
 				<TextInput
 					type="date"
 					label="Select date"

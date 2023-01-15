@@ -33,29 +33,37 @@ describe('Booking Form Validations', () => {
 	})
 
 	test('Input YUP validation Works', async () => {
-		const { getByTestId } = render(
+		const mock = jest.fn()
+
+		render(
 			<BookingPage
 				availableTimes={[{ value: '', label: '' }]}
 				setAvailableTimes={() => {}}
+				submitForm={mock}
 			/>
 		)
-		const dateInput = getByTestId('date')
-		const timeInput = getByTestId('time')
-		const guestsInput = getByTestId('guests')
-		const occasionInput = getByTestId('occasion')
+
+		const dateInput = screen.getByTestId('date')
+		const timeInput = screen.getByRole('combobox', { name: /time/i })
+		const guestsInput = screen.getByRole('spinbutton', {
+			name: /guests/i,
+		})
+		const occasionInput = screen.getByRole('combobox', {
+			name: /occasion/i,
+		})
 
 		fireEvent.change(dateInput, {
-			target: { value: new Date('2020').toISOString().slice(0, 10) },
+			target: { value: '2020-03-15' },
 		})
 		fireEvent.focusOut(dateInput)
 
-		fireEvent.change(guestsInput, { target: { value: 11 } })
-		fireEvent.focusOut(guestsInput)
-
-		fireEvent.change(timeInput, { target: { value: '' } })
+		fireEvent.change(timeInput, { target: { value: '20:00' } })
 		fireEvent.focusOut(timeInput)
 
-		fireEvent.change(occasionInput, { target: { value: '' } })
+		fireEvent.change(guestsInput, { target: { value: 25 } })
+		fireEvent.focusOut(guestsInput)
+
+		fireEvent.change(occasionInput, { target: { value: 'birthday' } })
 		fireEvent.focusOut(occasionInput)
 
 		expect(screen.findByTestId('date-error')).toBeDefined()
@@ -65,32 +73,41 @@ describe('Booking Form Validations', () => {
 	})
 
 	test('Form is Submitted', async () => {
-		const { getByTestId } = render(
+		const submitForm = jest.fn()
+
+		render(
 			<BookingPage
-				availableTimes={[{ value: '', label: '' }]}
+				availableTimes={[{ value: '20:00', label: '20:00' }]}
 				setAvailableTimes={() => {}}
+				submitForm={submitForm}
 			/>
 		)
-		const dateInput = getByTestId('date')
-		const timeInput = getByTestId('time')
-		const guestsInput = getByTestId('guests')
-		const occasionInput = getByTestId('occasion')
-		const form = getByTestId('booking-form')
+
+		const dateInput = screen.getByTestId('date')
+		const timeInput = screen.getByRole('combobox', { name: /time/i })
+		const guestsInput = screen.getByRole('spinbutton', {
+			name: /guests/i,
+		})
+		const occasionInput = screen.getByRole('combobox', {
+			name: /occasion/i,
+		})
+		const button = screen.getByRole('button')
 
 		fireEvent.change(dateInput, {
-			target: { value: new Date().toISOString().slice(0, 10) },
+			target: { value: '2023-03-15' },
 		})
 		fireEvent.focusOut(dateInput)
-
-		fireEvent.change(guestsInput, { target: { value: 15 } })
-		fireEvent.focusOut(guestsInput)
 
 		fireEvent.change(timeInput, { target: { value: '20:00' } })
 		fireEvent.focusOut(timeInput)
 
+		fireEvent.change(guestsInput, { target: { value: 5 } })
+		fireEvent.focusOut(guestsInput)
+
 		fireEvent.change(occasionInput, { target: { value: 'birthday' } })
 		fireEvent.focusOut(occasionInput)
 
-		fireEvent.submit(form, {})
+		fireEvent.click(button)
+		expect(button).not.toHaveAttribute('disabled')
 	})
 })
